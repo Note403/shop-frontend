@@ -1,6 +1,6 @@
 <template>
   <div class="w-screen h-screen absolute flex justify-center items-center">
-    <div class="h-1/3 w-1/4 shadow shadow-gray-400 rounded-2xl flex flex-col justify-center items-center">
+    <div class="absolute h-1/3 w-1/4 shadow shadow-gray-400 rounded-2xl flex flex-col justify-center items-center">
       <div class="w-max mb-5 flex">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
           <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" clip-rule="evenodd" />
@@ -22,10 +22,16 @@ export default {
 
   },
   mounted() {
+    window.addEventListener('keydown', this.keyInput);
   },
   methods: {
     login() {
 
+    },
+    keyInput(event) {
+      if (event.key === 'Escape') {
+        this.$emit('close');
+      }
     }
   }
 }

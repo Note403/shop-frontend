@@ -69,3 +69,7 @@ THIRD -> #00caff
 .url {
     color: #b700ff;
 }
+
+.back-link:hover {
+    cursor: pointer;
+}
