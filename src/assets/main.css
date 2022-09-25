@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/**
+PRIMARY -> #b700ff
+SECONDARY -> #919191
+THIRD -> #00caff
+ */
+
+.btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    min-width: 8rem;
+}
+
+.btn-primary {
+    border: 1px solid #b700ff;
+    color: #b700ff;
+    transition: .3s;
+}
+
+.btn-primary:hover {
+    background-color: #b700ff;
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid #919191;
+    color: #919191;
+    transition: .3s;
+}
+
+.btn-secondary:hover {
+    background-color: #919191;
+    color: white;
+}
+
+.btn-info {
+    border: 1px solid #00caff;
+    color: #00caff;
+    transition: .3s;
+}
+
+.btn-info:hover {
+    background-color: #00caff;
+    color: white;
+}
+
+.input {
+    border: 1px solid #919191;
+    color: #111111;
+    border-radius: 5px;
+    padding: 5px;
+    transition: .3s;
+    outline: none;
+    text-align: center;
+}
+
+.input::placeholder {
+    color: #919191;
+}
+
+.input:focus {
+    border: 1px solid #111111;
+}
+
+.url {
+    color: #b700ff;
+}
