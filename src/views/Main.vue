@@ -3,7 +3,7 @@
     <TopBar @login="showLogin"></TopBar>
     <Login v-if="vis.login" @close="closeModals"></Login>
     <div class="w-screen h-screen">
-
+      <Alert :message="alert.message" :type="alert.type"></Alert>
     </div>
   </div>
 </template>
@@ -15,10 +15,15 @@ export default {
     return {
       vis: {
         login: false
+      },
+      alert: {
+        message: null,
+        type: null
       }
     }
   },
   mounted() {
+    window.addEventListener('keydown', this.testInput);
   },
   methods: {
     showLogin() {
@@ -28,6 +33,30 @@ export default {
       for (const [key, value] of Object.entries(this.vis)) {
         this.vis[key] = false;
       }
+    },
+    testInput(event) {
+      switch (event.key) {
+        case '1':
+          this.alertmsg('Success Alert', 'success');
+          break;
+        case '2':
+          this.alertmsg('Error Alert', 'error');
+          break;
+        case '3':
+          this.alertmsg('Info Alert', 'info');
+          break;
+        default:
+          return;
+      }
+    },
+    alertmsg(message, type) {
+      this.alert.message = message;
+      this.alert.type = type;
+
+      setTimeout(() => {
+        this.alert.message = null;
+        this.alert.type = null;
+      }, 5000);
     }
   }
 }

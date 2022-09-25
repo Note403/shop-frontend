@@ -73,3 +73,25 @@ THIRD -> #00caff
 .back-link:hover {
     cursor: pointer;
 }
+
+.alert {
+    width: 20%;
+    height: 10%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(240,240,240,0.3);
+    color: #111111;
+}
+
+.error-icon {
+    color: #ff3043;
+}
+
+.success-icon {
+    color: #2fff46;
+}
+
+.info-icon {
+    color: #6babff;
+}
