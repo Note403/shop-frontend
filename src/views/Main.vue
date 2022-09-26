@@ -3,6 +3,7 @@
     <TopBar @login="showLogin"></TopBar>
     <Login v-if="vis.login" @close="closeModals"></Login>
     <div class="w-screen h-screen">
+      <Slideshow></Slideshow>
       <Alert :message="alert.message" :type="alert.type"></Alert>
     </div>
   </div>

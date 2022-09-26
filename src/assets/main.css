@@ -80,7 +80,7 @@ THIRD -> #00caff
     border-radius: 10px;
     display: flex;
     align-items: center;
-    background-color: rgba(240,240,240,0.3);
+    background-color: rgba(220,220,220,0.1);
     color: #111111;
 }
 
@@ -94,4 +94,14 @@ THIRD -> #00caff
 
 .info-icon {
     color: #6babff;
+}
+
+.search-input {
+    border-bottom: 1px solid #919191;
+    outline: none;
+    transition: .2s;
+}
+
+.search-input:focus {
+    border-bottom: 1px solid #111111;
 }
