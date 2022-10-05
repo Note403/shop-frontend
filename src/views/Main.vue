@@ -23,8 +23,15 @@ export default {
       }
     }
   },
+  computed: {
+    api_url() {
+      return this.$store.getters.getApiURL;
+    }
+  },
   mounted() {
     window.addEventListener('keydown', this.testInput);
+
+    console.log(this.api_url);
   },
   methods: {
     showLogin() {

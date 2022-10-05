@@ -27,7 +27,7 @@ export default {
   mounted() {
     window.setInterval(() => {
       this.changeSlideshowImg();
-    }, 8000)
+    }, 4000)
   },
   methods: {
     changeSlideshowImg() {

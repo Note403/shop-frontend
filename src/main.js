@@ -2,6 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
+import {Store} from "@/Store";
+
 import './assets/main.css'
 import TopBar from "@/components/TopBar.vue";
 import Login from "@/components/Login.vue";
@@ -22,5 +24,6 @@ app.component('ArticleDisplay', ArticleDisplay)
 app.component('Article', Article)
 
 app.use(router)
+app.use(Store)
 
 app.mount('#app')

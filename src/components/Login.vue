@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-screen absolute flex justify-center items-center">
+  <div class="w-screen h-screen absolute flex justify-center items-center backdrop-blur backdrop-grayscale-1">
     <div class="absolute h-1/3 w-1/4 shadow shadow-gray-400 rounded-2xl flex flex-col justify-center items-center">
       <div class="w-max mb-5 flex">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10">
